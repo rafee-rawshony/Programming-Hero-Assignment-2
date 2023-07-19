@@ -247,51 +247,50 @@ nav ul>li a {
     align-items: center;
     padding: 20px 220px 20px 220px;
 }
-/* ChatGPT */
-/* Add the hover effect and image border color */
+/*------------- Help from ChatGPT ------------------------- */
 .videos {
     position: relative;
+    display: inline-block;
+    margin: 10px;
     cursor: pointer;
+    transition: transform 0.3s ease;
   }
-  
-  .videos:hover img {
+
+  /* Scale up the content on hover */
+  .videos:hover {
     transform: scale(1.05);
-    border-color: pink;
   }
-  
-  .videos img {
-    border: 2px solid transparent;
-    transition: transform 0.3s ease, border-color 0.3s ease;
+
+  /* Add pink border to the image on hover */
+  .videos:hover img {
+    border-color: var(--pink);
   }
-  
-  /* Add the play button overlay */
-  .videos::before {
-    content: "";
+
+  /* Add the hover effect to the figcaption */
+  .videos figcaption {
     position: absolute;
-    top: 0;
+    bottom: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
+    right: 0;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
     opacity: 0;
     transition: opacity 0.3s ease;
   }
-  
-  .videos:hover::before {
+
+  /* Show the figcaption on hover */
+  .videos:hover figcaption {
     opacity: 1;
   }
-  
-  .videos figcaption {
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-    color: white;
+
+  /* Adjust the text styles */
+  .videos figcaption figcaption {
+    margin: 0;
     font-size: 14px;
+    line-height: 1.4;
   }
-  
-  /* Adjust any other styles as needed */
-  
-/* ChatGPT End */
+/*------------- Help from ChatGPT end ----------------------- */
 figcaption {
     color: var(--light-grey2);
     font-size: 1.1rem;
